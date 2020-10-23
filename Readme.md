@@ -146,4 +146,41 @@ Best case: O(n log (n))
 Worst case: O(n log (n))
 Average case: O(n *n)
 
+## Assignment - 3
+### WAP to perform Prim and Kruskal Algorithms.
+
+1.Prim Algorithm
+
+*   Begin
+*   Create an edge list of given graph, with their weights.
+*   Draw all nodes to create a skeleton for the spanning tree.
+*   Select an edge with lowest weight and add it to the skeleton and delete edge from edge list.
+*   Add other edges. While adding an edge take care that the one end of the edge should always be in the skeleton tree and its cost should be minimum.
+*   Repeat step 5 until n-1 edges are added.
+*   Return.
+
+Output:
+ Since we are using an Adjacency Matrix for storing edges, hence time complexity     will  O(|V|2). 
+
+2.Kruskal Algorithm
+
+*   Begin
+*   Create the edge list of the given graph, with their weights.
+*   Sort the edge list according to their weights in ascending order.
+*   Draw all the nodes to create a skeleton for the spanning tree.
+*   Pick up the edge at the top of the edge list (i.e. edge with    minimum weight).
+*   Remove this edge from the edge list.
+*   Connect the vertices in the skeleton with the given edge. If by connecting the vertices, a cycle is created in the skeleton, then discard this edge.
+*   Repeat steps 5 to 7, until n-1 edges are added or the list of edges is over.
+*   Return
+
+Output:
+Let us assume a graph with e number of edges and n number of vertices. Kruskal’s algorithm starts with sorting edges.
+*   Time complexity of sorting algorithm= O (e log e)
+*   Time complexity of merging of components= O (e log n)
+
+Overall time complexity of the algorithm= O (e log e) + O (e log n)
+
+
+
 
