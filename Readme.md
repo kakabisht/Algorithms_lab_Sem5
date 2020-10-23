@@ -181,6 +181,21 @@ Let us assume a graph with e number of edges and n number of vertices. Kruskalâ€
 
 Overall time complexity of the algorithm= O (e log e) + O (e log n)
 
+## Assignment - 4
+### WAP to perform Dijkstra Algorithms.
+
+Dijkstra Algorithm:
+*   Start with the empty Shortest Path Tree (SPT).
+*   Maintain a set SPT[] to keep track to vertices included in SPT.
+*   Assign a distance value to all the vertices, (say distance []) and initialize all the distances with +âˆž (Infinity) except the source vertex. This will be used to keep track of the distance of vertices *from the source vertex. The distance of source vertex to source *vertex will be 0.
+*   Repeat the following steps until all vertices are processed.
+    *   Pick the vertex u which is not in SPT[] and has minimum distance. Here we will loop through the vertices and find the vertex with minimum distance.
+    *   Add vertex u to SPT[].
+    *   Loop over all the adjacent vertices of
+    *   For adjacent vertex v, if v is not in SPT[] and distance[v] > distance[u] + edge u-v weight then update distance[v] = distance[u] + edge u-v weight
+ 
+Time Complexity: O(|V|2), since we are using a matrix for storing data.
+
 
 
 
