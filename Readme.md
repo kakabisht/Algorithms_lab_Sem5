@@ -87,14 +87,39 @@ Overall time complexity of the algorithm= O (e log e) + O (e log n)
 Dijkstra Algorithm:
 
 Output: 
-Time Complexity: O(|V|2), since we are using a matrix for storing data.
+Time Complexity: O(|V|2), since we are using a matrix for storing data
+
+## Assignment -5
+### WAP to perform Knapsack problem using Greedy strategy and Dynamic Programming.
+
+1.Greedy approach:
+
+Output:
+*   Time Complexity: Time complexity of the sorting + Time complexity of the loop to maximize profit = O(NlogN) + O(N) = O(NlogN)
+*   Space Complexity: O(1)
+
+2.Dynamic approach:
+*   Time complexity: Θ(n*W)
+*   Space complexity: Θ(n*W)
 
 ## Assignment - 6
 ### WAP to perform Floyd–Warshall Algorithm.
 
 Output:
 *   Time Complexity: The time complexity of the Floyd-Warshall algorithm is O(n3), as there are three for loops of size n.
-*   Space Complexity: The space complexity of the Floyd-Warshall algorithm is O(n2).
+*   Space Complexity: The space complexity of the Floyd-Warshall algorithm is O(n2)
+
+## Assignment - 7
+### WAP to perform Optimal Merge Pattern.
+
+Output:
+*   Time complexity: O(N log N)
+Time to create a min-heap tree of given records= O(n)
+From min-heap, every time two minimum element will be deleted(2 log n) and their sum will be inserted(log n) after merging. It will continue at max (n-1)times
+*   Space Complexity: O(n) 
+ As we have stored data in a linear data structure such as a min-heap tree.
+ 
+
 
 ## Assignment - 8
 ### WAP to perform N-Queen Algorithm.

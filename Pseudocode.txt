@@ -196,6 +196,84 @@ Dijkstra Algorithm:
  
 Time Complexity: O(|V|2), since we are using a matrix for storing data.
 
+Assignment -5
+WAP to perform Knapsack problem using Greedy strategy and Dynamic Programming.
 
+Knapsack Algorithm:
+1.Find the ratio value/weight for each item and sort the item on the basis of this ratio.
+2.Choose the item with the highest ratio and add them until we can’t add the next item.
+3.In the end, add the next item as much as we can.
+4.Print the maximum profit after the above steps.
+
+In 0-1 Knapsack we either take the item completely or not, but in fractional Knapsack we take items in fractions.
+
+Time Complexity:
+1.For fractional= O(nlogn)
+2.For 0-1 Dynamic= O(N*W)
+
+Assignment -6
+
+Implement Floyd’s Algorithm to find the shortest path between each pair of vertices in a weighted graph. Display the results as a distance matrix.
+
+Instructions:
+1.Input to the program is the cost adjacency matrix of a graph and output should be path matrix
+2.Include time complexity analysis of Floyd’s Algorithm to find the shortest path between each pair of vertices
+
+Algorithm:
+1.Begin
+2.Input the cost adjacency matrix of a graph.
+3.Initialize the shortest paths between any 2 vertices with Infinity.
+4.Find all pair shortest paths that use 0 intermediate vertices, then find the shortest paths that use 1 intermediate vertex and so on.. until using all N vertices as intermediate nodes.
+5.Minimize the shortest paths between any 2 pairs in the previous operation.
+6.For any 2 vertices (i,j) , one should actually minimize the distances between this pair using the first K nodes, so the shortest path will be: min(dist[i][k]+dist[k][j],dist[i][j]).
+7.End
+
+1.Time Complexity:
+The time complexity of the Floyd-Warshall algorithm is O(n3), as there are three for loops of size n.
+2.Space Complexity:
+The space complexity of the Floyd-Warshall algorithm
+
+Assignment -7
+
+WAP to perform Optimal Merge Pattern.
+
+1.Pseudocode:
+
+A node represents a file with a given size also given nodes are greater than 2
+1.Add all the nodes in a priority queue (Min Heap).{node.weight = file size}
+2.Initialize count = 0 // variable to store file computations.
+3.Repeat while (size of priority Queue is greater than 1)
+4.create a new node
+5.new node = pq.poll().weight+pq.poll().weight;//pq denotes priority queue, remove 1st smallest and 2nd smallest element and add their weights to get a new node
+6.count += node.weight
+7.add this new node to priority queue;
+8.count is the final answer
+
+1.Time complexity: O(N log N)
+Time to create a min-heap tree of given records= O(n)
+From min-heap, every time two minimum element will be deleted(2 log n) and their sum will be inserted(log n) after merging. It will continue at max (n-1)times
+2.Space Complexity: O(n) 
+As we have stored data in a linear data structure such as a min-heap tree.
+ 
+Assignment -8
+
+WAP to implement the n-queens problem.
+
+1.Pseudocode / Algorithm:
+
+1.Begin
+2.Start in the leftmost column
+3.If all queens are placed return true
+4.Try all rows in the current column. Do following for every tried row.
+    1.If the queen can be placed safely in this row then mark this [row, column] as part of the solution and recursively check if placing queen here leads to a solution.
+    2.If placing the queen in [row, column] leads to a solution then return true.
+    3.If placing queen doesn't lead to a solution then unmark this [row, column] (Backtrack) and go to step (a) to try other rows.
+5.If all rows have been tried and nothing worked, return false to trigger backtracking.
+6.End
+
+1.Space complexity
+For this algorithm it is O(N). 
+2.Time complexity
+T(n) = n*T(n-1) + O(n^2) which translates to O(N!) time complexity approximately.
 
 
